@@ -11,7 +11,7 @@
 
 .title {
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -67,8 +67,8 @@ body {
 
 .star.constellation {
     animation: none;
-    width: 5px;
-    height: 5px;
+    width: 6.5px;
+    height: 6.5px;
     border-radius: 100%;
 }
 
@@ -128,10 +128,6 @@ body {
     transition: transform 0.3s;
 }
 
-.space-object:hover {
-    transform: scale(1.2);
-}
-
 /* Neon text effect */
 .neon-text {
     color: #fff;
@@ -179,7 +175,7 @@ body {
     font-size: 30px;
     font-weight: bold;
     color: #00ffff; 
-    background-color: #000000;
+    background-color: #00000000;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de;
     animation: moveMarquee 25s infinite;
     z-index: 1000; /* Make sure it stays on top */
@@ -193,3 +189,17 @@ body {
         left: -100%; /* End offscreen to the left */
     }
 }
+
+/* Rotation animation */
+.rotate {
+    animation: rotate 20s linear infinite; 
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); 
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+  }
