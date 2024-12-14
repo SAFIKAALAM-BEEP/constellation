@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --neon-pink: #ff69b4;
+  --neon-blue: #00ffff;
+}
+
+* {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="fill:white;"><text y="16">✧</text></svg>') 10 10, auto;
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0 0 10px var(--neon-blue),
+                 0 0 20px var(--neon-pink);
+    z-index: 100;
+    letter-spacing: 2px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    min-height: 250vh;
+    font-family: 'VT323', monospace;
+    overflow-x: hidden;
+}
+
+#sky-container {
+    background: linear-gradient(to bottom, #000000, #1a237e, #000000);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250vh;
+    transition: background-color 0.5s;
+}
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250vh;
+    background-image: linear-gradient(rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+/* Twinkling animation */
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: twinkle 1s infinite alternate;
+    z-index: 2;
+}
+
+.star.constellation {
+    animation: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+
+/* Make hitbox larger */
+.star.constellation::after {
+    content: '';
+    position: absolute;
+    top: -15px;  
+    left: -15px; 
+    right: -15px;
+    bottom: -15px;
+    background: transparent; 
+    z-index: -1; 
+    pointer-events: auto; 
+}
+
+/* Highlight hover effect */
+.star.constellation:hover {
+    transform: scale(1.5); 
+    box-shadow: 0 0 20px 10px rgba(255, 0, 255, 0.8), 0 0 15px 10px rgba(0, 255, 255, 0.8); 
+    background: #ff00ff; 
+    border: 1px solid #00ffff; 
+}
+
+.constellation-line {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    transform-origin: 0 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Constellation info popup */
+.constellation-info {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    border: 2px solid #ff00ff;
+    color: #00ffff;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    display: none;
+    z-index: 3;
+    font-size: 14px;
+    box-shadow: 0 0 10px #ff00ff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+/* 90s decorative elements */
+.space-object {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+    image-rendering: pixelated;
+    transition: transform 0.3s;
+}
+
+.space-object:hover {
+    transform: scale(1.2);
+}
+
+/* Neon text effect */
+.neon-text {
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 20px #ff00de,
+                 0 0 30px #ff00de,
+                 0 0 40px #ff00de;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 20px #ff00de,
+                     0 0 30px #ff00de,
+                     0 0 40px #ff00de;
+    }
+    to {
+        text-shadow: 0 0 2px #fff,
+                     0 0 5px #fff,
+                     0 0 10px #ff00de,
+                     0 0 15px #ff00de,
+                     0 0 20px #ff00de;
+    }
+}
+
+/* Background star twinkle animation */
+.background-star {
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Marquee styling */
+.marquee {
+    position: absolute;
+    top: 10px;
+    left: 100%; /* Start offscreen to the right */
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: bold;
+    color: #00ffff; 
+    background-color: #000000;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de;
+    animation: moveMarquee 25s infinite;
+    z-index: 1000; /* Make sure it stays on top */
+}
+
+@keyframes moveMarquee {
+    0% {
+        left: 100%; /* Start offscreen to the right */
+    }
+    100% {
+        left: -100%; /* End offscreen to the left */
+    }
+}
