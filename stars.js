@@ -123,7 +123,10 @@ const spaceObjects = [
   { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 50, link: 'asteroid', size: 300, rotate: false },
   { name: 'Galaga', image: 'media/galaga.gif', x: 0, y: 75, link: 'galaga', size: 250, rotate: false },
   { name: 'orca', image:'media/orca.gif', x: 75, y: 75, link: 'orca', size: 250, rotate: false},
-  { name: 'Voyager 1', image: 'media/voyager-1.png', x: 80, y: 45, link: 'voyager-1', size: 300, rotate: true }
+  { name: 'Voyager 1', image: 'media/voyager-1.png', x: 80, y: 45, link: 'voyager-1', size: 300, rotate: true },
+  { name: 'DVD', image: 'media/dvd.gif', x: 80, y: 120, link: 'dvd', size: 300, rotate: false },
+  { name: 'Book', image: 'media/book.gif', x: 5, y: 120, link: 'book', size: 300, rotate: false }
+
 ];
 
 function createConstellationInfo(constellation) {
@@ -272,5 +275,3 @@ function updateBackground() {
 
 window.addEventListener('scroll', updateBackground);
 updateBackground();
-
-
