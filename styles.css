@@ -117,7 +117,6 @@ body {
     text-shadow: 0 0 5px #00ffff;
 }
 
-/* 90s decorative elements */
 .space-object {
     position: absolute;
     width: 40px;
@@ -203,3 +202,52 @@ body {
       transform: rotate(360deg); 
     }
   }
+
+
+/* Space object popout */
+.space-object-popout {
+    position: absolute;
+    background-color: #5500ff;
+    border: 5px solid #000000;
+    box-shadow: 5px 5px 0px #FF6B6B;
+    padding: 15px;
+    z-index: 1000;
+    font-family: 'VT323', monospace;
+    max-width: 300px;
+    text-align: center;
+    pointer-events: all;
+  }
+  
+  .space-object-popout img {
+    max-width: 200px;
+    border: 3px dashed #4ECDC4;
+    margin: 10px 0;
+  }
+  
+  .space-object-popout::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-right: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+  }
+  
+  /* Description text styling */
+  .space-object-popout p {
+    color: #00FFFF;
+    font-size: 14px;
+    text-shadow: 0 0 5px #FF00DE, 0 0 10px #FF00DE;
+  }
+  
+  /* Additional description image */
+  .space-object-popout img:last-of-type {
+    max-width: 250px; /* Adjust this if the description image is larger */
+    border: 2px dashed #FF6B6B;
+    margin-top: 10px;
+  }
+  

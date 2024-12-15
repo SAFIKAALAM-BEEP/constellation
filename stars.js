@@ -33,99 +33,68 @@ const constellations = [
   
       ],
       lines: [[0,1], [1,2], [2,3], [2, 4], [4,5], [5,6], [5,7], [4,8], [3,8], [8,9], [3,10], [9,10], [9,11], [11,12]]
+    },
+    {
+      name: 'Scorpius',
+      story: "The Scorpion - A creature sent by Gaia to defeat Orion, now immortalized in the stars.",
+      stars: [
+        { name: 'Antares', x: 180, y: 150 },
+        { name: 'Shaula', x: 190, y: 160 },
+        { name: 'Sargas', x: 185, y: 155 },
+        { name: 'Dschubba', x: 175, y: 145 },
+        { name: 'Lesath', x: 195, y: 165 },
+        { name: 'Graffias', x: 170, y: 140 }
+      ],
+      lines: [[0,1], [1,2], [2,3], [0,4], [0,5]]
+    },
+    {
+      name: 'Sagittarius',
+      story: "The Archer - Aiming an arrow towards the heart of the Scorpion.",
+      stars: [
+        { name: 'Kaus Australis', x: 200, y: 120 },
+        { name: 'Kaus Media', x: 205, y: 125 },
+        { name: 'Kaus Borealis', x: 210, y: 130 },
+        { name: 'Nunki', x: 195, y: 115 },
+        { name: 'Ascella', x: 210, y: 110 }
+      ],
+      lines: [[0,1], [1,2], [0,3], [0,4]]
+    },
+    {
+      name: 'Cancer',
+      story: "The Crab - Sent by Hera to distract Hercules during his battle.",
+      stars: [
+        { name: 'Altarf', x: 80, y: 120 },
+        { name: 'Asellus Borealis', x: 85, y: 125 },
+        { name: 'Asellus Australis', x: 90, y: 130 },
+        { name: 'Acubens', x: 75, y: 115 }
+      ],
+      lines: [[0,1], [1,2], [0,3]]
+    },
+ 
+    {
+      name: 'Leo',
+      story: "The Lion - Representing the Nemean Lion defeated by Hercules.",
+      stars: [
+        { name: 'Regulus', x: 100, y: 70 },
+        { name: 'Denebola', x: 105, y: 75 },
+        { name: 'Algieba', x: 110, y: 80 },
+        { name: 'Zosma', x: 95, y: 65 }
+      ],
+      lines: [[0,1], [1,2], [0,3]]
     }
-    // {
-    //   name: 'Scorpius',
-    //   story: "The Scorpion - A creature sent by Gaia to defeat Orion, now immortalized in the stars.",
-    //   stars: [
-    //     { name: 'Antares', x: 180, y: 150 },
-    //     { name: 'Shaula', x: 190, y: 160 },
-    //     { name: 'Sargas', x: 185, y: 155 },
-    //     { name: 'Dschubba', x: 175, y: 145 },
-    //     { name: 'Lesath', x: 195, y: 165 },
-    //     { name: 'Graffias', x: 170, y: 140 }
-    //   ],
-    //   lines: [[0,1], [1,2], [2,3], [0,4], [0,5]]
-    // },
-    // {
-    //   name: 'Sagittarius',
-    //   story: "The Archer - Aiming an arrow towards the heart of the Scorpion.",
-    //   stars: [
-    //     { name: 'Kaus Australis', x: 200, y: 120 },
-    //     { name: 'Kaus Media', x: 205, y: 125 },
-    //     { name: 'Kaus Borealis', x: 210, y: 130 },
-    //     { name: 'Nunki', x: 195, y: 115 },
-    //     { name: 'Ascella', x: 210, y: 110 }
-    //   ],
-    //   lines: [[0,1], [1,2], [0,3], [0,4]]
-    // },
-    // {
-    //   name: 'Aquarius',
-    //   story: "The Water Bearer - Pouring the celestial waters.",
-    //   stars: [
-    //     { name: 'Sadalmelik', x: 100, y: 200 },
-    //     { name: 'Sadalsuud', x: 105, y: 205 },
-    //     { name: 'Sadachbia', x: 110, y: 210 },
-    //     { name: 'Albali', x: 95, y: 195 }
-    //   ],
-    //   lines: [[0,1], [1,2], [0,3]]
-    // },
-    // {
-    //   name: 'Cancer',
-    //   story: "The Crab - Sent by Hera to distract Hercules during his battle.",
-    //   stars: [
-    //     { name: 'Altarf', x: 80, y: 120 },
-    //     { name: 'Asellus Borealis', x: 85, y: 125 },
-    //     { name: 'Asellus Australis', x: 90, y: 130 },
-    //     { name: 'Acubens', x: 75, y: 115 }
-    //   ],
-    //   lines: [[0,1], [1,2], [0,3]]
-    // },
-    // {
-    //   name: 'Capricornus',
-    //   story: "The Sea-Goat - A mythical creature with the head of a goat and tail of a fish.",
-    //   stars: [
-    //     { name: 'Deneb Algedi', x: 150, y: 220 },
-    //     { name: 'Dabih', x: 155, y: 225 },
-    //     { name: 'Algedi Prima', x: 160, y: 230 },
-    //     { name: 'Algedi Secunda', x: 145, y: 215 }
-    //   ],
-    //   lines: [[0,1], [1,2], [0,3]]
-    // },
-    // {
-    //   name: 'Leo',
-    //   story: "The Lion - Representing the Nemean Lion defeated by Hercules.",
-    //   stars: [
-    //     { name: 'Regulus', x: 100, y: 70 },
-    //     { name: 'Denebola', x: 105, y: 75 },
-    //     { name: 'Algieba', x: 110, y: 80 },
-    //     { name: 'Zosma', x: 95, y: 65 }
-    //   ],
-    //   lines: [[0,1], [1,2], [0,3]]
-    // },
-    // {
-    //   name: 'Pisces',
-    //   story: "The Fishes - Bound together by a cord, representing transformation.",
-    //   stars: [
-    //     { name: 'Alpherg', x: 120, y: 230 },
-    //     { name: 'Fum al Samakah', x: 125, y: 235 },
-    //     { name: 'Kullat Nunu', x: 130, y: 240 },
-    //     { name: 'Torcular', x: 115, y: 225 }
-    //   ],
-    //   lines: [[0,1], [1,2], [0,3]]
-    // }
 
     //Libra
   ];
 
 const spaceObjects = [
-  { name: 'Nyan Cat', image: 'media/nyan-cat.gif', x: 0, y: 25, link: 'nyan-cat', size: 300, rotate: false },
-  { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 50, link: 'asteroid', size: 300, rotate: false },
-  { name: 'Galaga', image: 'media/galaga.gif', x: 0, y: 75, link: 'galaga', size: 250, rotate: false },
-  { name: 'orca', image:'media/orca.gif', x: 75, y: 75, link: 'orca', size: 250, rotate: false},
-  { name: 'Voyager 1', image: 'media/voyager-1.png', x: 80, y: 45, link: 'voyager-1', size: 300, rotate: true },
-  { name: 'DVD', image: 'media/dvd.gif', x: 80, y: 120, link: 'dvd', size: 300, rotate: false },
-  { name: 'Book', image: 'media/book.gif', x: 5, y: 120, link: 'book', size: 300, rotate: false }
+  { name: 'Nyan Cat', image: 'media/nyan-cat.gif', x: 0, y: 25, link: 'nyan-cat', size: 300, rotate: false, has_link: true },
+  { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 50, link: 'space', size: 300, rotate: false, has_link: true },
+  { name: 'Galaga', image: 'media/galaga.gif', x: 0, y: 75, link: 'media', size: 250, rotate: false, has_link: true },
+  { name: 'orca', image:'media/orca.gif', x: 75, y: 75, link: '', size: 250, rotate: false, has_link: false, description: 'Did you know orcas have starting wearing salmon as hats again? How do they keep it balanced on their heads?', description_img: 'media/orca2.gif'},
+  { name: 'Voyager 1', image: 'media/voyager-1.png', x: 80, y: 30, link: 'space', size: 300, rotate: true, has_link: true },
+  { name: 'DVD', image: 'media/dvd.gif', x: 80, y: 120, link: 'media', size: 300, rotate: false , has_link: true},
+  { name: 'Tetris', image: 'media/tetris.gif', x: 75, y: 200, link: 'media', size: 300, rotate: false, has_link: true },
+  { name: 'Book', image: 'media/book.gif', x: 5, y: 120, link: 'media', size: 300, rotate: false, has_link: true }
 
 ];
 
@@ -211,8 +180,8 @@ constellations.forEach((constellation, index) => {
     
     starElement.addEventListener('click', () => {
       // Navigate to star's folder and its HTML page
-      const starPage = `star-${star.name.toLowerCase()}.html`;
-      window.location.href = starPage;
+      const constellationPage = `${constellation.name.toLowerCase().replace(/\s+/g, '-')}.html`;
+      window.location.href = constellationPage;
     });
     
     starElement.addEventListener('mouseover', () => {
@@ -249,14 +218,49 @@ spaceObjects.forEach(object => {
     element.classList.add('rotate');
   }
 
-  element.addEventListener('click', () => {
-    // Link to space object's page
-    window.location.href = `${object.link}.html`;
-  });
-  
-  
+  if (!object.has_link) {
+    element.addEventListener('click', () => {
+      showPopout(object, element);
+    });
+  }
+  else {
+    element.addEventListener('click', () => {
+      window.location.href = `${object.link}.html`;
+    });
+  }
   skyContainer.appendChild(element);
 });
+
+// Function to show popout
+function showPopout(object, element) {
+  const popout = document.createElement('div');
+  popout.className = 'space-object-popout';
+
+  if (object.description) {
+    const description = document.createElement('p');
+    description.textContent = object.description;
+    popout.appendChild(description);
+  }
+
+  if (object.description_img) {
+    const descImg = document.createElement('img');
+    descImg.src = object.description_img;
+    descImg.alt = 'Description Image';
+    popout.appendChild(descImg);
+  }
+
+  // Position the popout above the space object
+  const rect = element.getBoundingClientRect();
+  popout.style.left = `${rect.left + window.scrollX}px`;  
+  popout.style.top = `${rect.top + window.scrollY - popout.offsetHeight}px`;
+
+  document.body.appendChild(popout);
+
+  // Remove the popout when clicked
+  popout.addEventListener('click', () => {
+    popout.remove();
+  });
+}
 
 function updateBackground() {
   const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
