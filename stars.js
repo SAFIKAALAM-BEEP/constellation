@@ -4,8 +4,11 @@ const skyContainer = document.getElementById('sky-container');
 const ursaX = 30;
 const ursaY = 50; 
 
-const scorX = 50;
-const scorY = 110;
+const scorX = 80;
+const scorY = 90;
+
+const sagiX = 50;
+const sagiY = 150;
 
 // constellation coords
 const constellations = [
@@ -62,13 +65,29 @@ const constellations = [
       name: 'Sagittarius',
       story: "The Archer - Aiming an arrow towards the heart of the Scorpion.",
       stars: [
-        { name: 'Kaus Australis', x: 200, y: 120 },
-        { name: 'Kaus Media', x: 205, y: 125 },
-        { name: 'Kaus Borealis', x: 210, y: 130 },
-        { name: 'Nunki', x: 195, y: 115 },
-        { name: 'Ascella', x: 210, y: 110 }
+        { name: 'Polis', x: sagiX, y: sagiY }, // 0
+        { name: 'Kaus Borealis', x: sagiX - 4, y: sagiY + 6 }, // 1
+        { name: 'Kaus Media', x: sagiX - 2, y: sagiY + 20}, //2
+        { name: 'Alnasl', x: sagiX +  4, y:sagiY + 21 }, // 3
+
+        { name: 'φ', x: sagiX - 10, y:sagiY + 6 }, // 4
+        { name: '0', x: sagiX - 12, y:sagiY}, // 5
+
+        { name: 'Ο', x: sagiX - 12, y:sagiY - 10}, // 6
+        { name: 'ρ', x: sagiX - 16, y:sagiY - 18}, // 7
+        { name: 'ξ', x: sagiX - 8, y:sagiY - 12}, // 8
+
+        { name: 'τ', x: sagiX - 16, y: sagiY + 6 }, // 9
+        { name: 'Ascella', x: sagiX - 17, y: sagiY + 15 }, // 10
+
+        { name: '52', x: sagiX - 20, y: sagiY + 2 }, // 11
+        { name: '62', x: sagiX - 26, y: sagiY + 6 }, // 12
+        { name: 'θ', x: sagiX - 24, y: sagiY + 22 }, // 13
+        { name: 'Rukbat', x: sagiX - 17, y: sagiY + 20 }, // 14
+        { name: 'Arkab Prior', x: sagiX - 20, y: sagiY + 35 } // 15
+
       ],
-      lines: [[0,1], [1,2], [0,3], [0,4]]
+      lines: [[0,1], [1,2], [2, 3], [1,4], [4,5], [5,6], [5,9], [6,7], [6,8], [4, 10], [9, 10], [9,11], [11,12],[12,13], [13,14], [13,15]]
     }
 
     //Libra
@@ -93,7 +112,7 @@ const spaceObjects = [
   description: ' ',
   description_img: ' '},
 
-  { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 140, link: '', size: 300, rotate: false, has_link: false,
+  { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 90, link: '', size: 300, rotate: false, has_link: false,
   description: ' ',
   description_img: ' '},
 

@@ -42,7 +42,8 @@ gap: 30px;
 margin: 30px 0;
 }
 .icon-box {
-border: 2px solid white;
+border: 5px solid rgb(0, 255, 255);
+background-color: white;
 width: 100px;
 height: 100px;
 display: flex;
@@ -50,9 +51,6 @@ align-items: center;
 justify-content: center;
 cursor: pointer;
 transition: background-color 0.3s;
-}
-.icon-box:hover {
-background-color: rgba(255,255,255,0.2);
 }
 .icon-box img {
 max-width: 80px;
