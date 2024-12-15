@@ -10,6 +10,9 @@ const scorY = 90;
 const sagiX = 50;
 const sagiY = 150;
 
+const libraX = 60;
+const libraY = 250;
+
 // constellation coords
 const constellations = [
     {
@@ -88,11 +91,37 @@ const constellations = [
 
       ],
       lines: [[0,1], [1,2], [2, 3], [1,4], [4,5], [5,6], [5,9], [6,7], [6,8], [4, 10], [9, 10], [9,11], [11,12],[12,13], [13,14], [13,15]]
-    }
+    },
+    {
+      name: 'Libra',
+      story: "The Scales, held by Dike, the Greek goddess of justice.",
+      stars: [
+        { name: 'Libra Star', x: libraX, y: libraY }, // 0
+        { name: 'Zubenhakrabi', x: libraX - 20, y: libraY + 35 } // 1
 
-    //Libra
-    //Orion
-    //Canis minor
+      ],
+      lines: [[0,1]]
+    },
+    {
+      name: 'Orion',
+      story: "Son of the sea god, Poseidon, Orion was the great Greek hunter. ",
+      stars: [
+        { name: 'Orion Star', x:30 , y: 200 }, // 0
+        { name: 'Meissa', x: 20, y: 200 } // 1
+
+      ],
+      lines: [[0,1]]
+    },
+  {
+    name: 'Canis Minor',
+    story: "One of Orion's Dogs",
+    stars: [
+      { name: 'Canis Star', x:60 , y: 200 }, // 0
+      { name: 'Gomeisa', x: 60, y: 180 } // 1
+
+    ],
+    lines: [[0,1]]
+  }
   ];
 
 const spaceObjects = [
