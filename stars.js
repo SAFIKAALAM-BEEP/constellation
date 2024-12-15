@@ -4,12 +4,15 @@ const skyContainer = document.getElementById('sky-container');
 const ursaX = 30;
 const ursaY = 50; 
 
+const scorX = 50;
+const scorY = 110;
+
 const constellations = [
     {
       name: 'Ursa Major',
       story: "The Great Bear - Zeus transformed a beautiful nymph into a bear to protect her, placing her among the stars.",
       stars: [
-        { name: 'Alkaid', x: 30, y: 50 }, // 0 
+        { name: 'Alkaid', x: ursaX, y: ursaY }, // 0 
         { name: 'Alioth', x: ursaX + 5, y: ursaY - 5 }, // 1
         { name: 'Megrez', x: ursaX + 12, y: ursaY - 3 }, // 2
         { name: 'Dubhe', x: ursaX + 20, y: ursaY - 10 }, // 3
@@ -38,14 +41,21 @@ const constellations = [
       name: 'Scorpius',
       story: "The Scorpion - A creature sent by Gaia to defeat Orion, now immortalized in the stars.",
       stars: [
-        { name: 'Antares', x: 180, y: 150 },
-        { name: 'Shaula', x: 190, y: 160 },
-        { name: 'Sargas', x: 185, y: 155 },
-        { name: 'Dschubba', x: 175, y: 145 },
-        { name: 'Lesath', x: 195, y: 165 },
-        { name: 'Graffias', x: 170, y: 140 }
+        { name: 'ξ', x: scorX, y: scorY }, // 0
+        { name: 'Acrab', x: scorX - 2, y: scorY + 10}, // 1
+        { name: 'Dschubba', x: scorX + .5, y: scorY + 18 }, // 2
+        { name: 'π', x: scorX + 1, y: scorY + 26 }, // 3
+        { name: 'σ', x: scorX - 5, y: scorY + 22 }, // 4
+
+        { name: 'τ', x: scorX - 3, y: scorY + 11 }, // 5
+        { name: 'Antares', x: scorX - 8, y: scorY + 25 }, // 6
+        { name: 'Larawag', x: scorX - 10, y: scorY + 40 }, //7
+        { name: 'ζ', x: scorX - 11, y: scorY + 50 }, //8
+        { name: 'Sargas', x: scorX - 15, y: scorY + 53 }, // 9
+        { name: 'Apollyon', x: scorX - 20, y: scorY + 49 }, // 10
+        { name: 'Shaula', x: scorX - 14, y: scorY + 42 } // 11
       ],
-      lines: [[0,1], [1,2], [2,3], [0,4], [0,5]]
+      lines: [[0,1], [1,2], [2,3], [3,4], [4,5], [4,5], [4,6], [6,7], [7,8], [8,9], [9,10], [10,11]]
     },
     {
       name: 'Sagittarius',
@@ -60,18 +70,6 @@ const constellations = [
       lines: [[0,1], [1,2], [0,3], [0,4]]
     },
     {
-      name: 'Cancer',
-      story: "The Crab - Sent by Hera to distract Hercules during his battle.",
-      stars: [
-        { name: 'Altarf', x: 80, y: 120 },
-        { name: 'Asellus Borealis', x: 85, y: 125 },
-        { name: 'Asellus Australis', x: 90, y: 130 },
-        { name: 'Acubens', x: 75, y: 115 }
-      ],
-      lines: [[0,1], [1,2], [0,3]]
-    },
- 
-    {
       name: 'Leo',
       story: "The Lion - Representing the Nemean Lion defeated by Hercules.",
       stars: [
@@ -84,18 +82,33 @@ const constellations = [
     }
 
     //Libra
+    //Orion
   ];
 
 const spaceObjects = [
   { name: 'Nyan Cat', image: 'media/nyan-cat.gif', x: 0, y: 25, link: 'nyan-cat', size: 300, rotate: false, has_link: true },
-  { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 50, link: 'space', size: 300, rotate: false, has_link: true },
-  { name: 'Galaga', image: 'media/galaga.gif', x: 0, y: 75, link: 'media', size: 250, rotate: false, has_link: true },
-  { name: 'orca', image:'media/orca.gif', x: 75, y: 75, link: '', size: 250, rotate: false, has_link: false, description: 'Did you know orcas have starting wearing salmon as hats again? How do they keep it balanced on their heads?', description_img: 'media/orca2.gif'},
-  { name: 'Voyager 1', image: 'media/voyager-1.png', x: 80, y: 30, link: 'space', size: 300, rotate: true, has_link: true },
-  { name: 'DVD', image: 'media/dvd.gif', x: 80, y: 120, link: 'media', size: 300, rotate: false , has_link: true},
-  { name: 'Tetris', image: 'media/tetris.gif', x: 75, y: 200, link: 'media', size: 300, rotate: false, has_link: true },
-  { name: 'Book', image: 'media/book.gif', x: 5, y: 120, link: 'media', size: 300, rotate: false, has_link: true }
+  { name: 'Galaga', image: 'media/galaga.gif', x: 50, y: 75, link: 'media', size: 150, rotate: false, has_link: true },
+  { name: 'Book', image: 'media/book.gif', x: 15, y: 60, link: 'media', size: 120, rotate: false, has_link: true },
 
+  { name: 'orca', image:'media/orca.gif', x: 75, y: 50, link: '', size: 300, rotate: false, has_link: false, 
+  description: 'Did you know orcas have starting wearing salmon as hats again? How do they keep it balanced on their heads?', 
+  description_img: 'media/orca2.gif'},
+
+  { name: 'Voyager 1', image: 'media/voyager-1.png', x: 20, y: 250, link: '', size: 300, rotate: true, has_link: false,
+  description: 'Voyager 1 communicated back to us after so long! It turns out there were some technical difficulties... Though imagine if spacecrafts could speal',
+  description_img: 'media/voyage2.gif' },
+
+  { name: 'DVD', image: 'media/dvd.gif', x: 80, y: 120, link: '', size: 500, rotate: false , has_link: false,
+  description: ' ',
+  description_img: ' '},
+  
+  { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 140, link: '', size: 300, rotate: false, has_link: false,
+  description: ' ',
+  description_img: ' '},
+
+  { name: 'Tetris', image: 'media/tetris.gif', x: 75, y: 200, link: '', size: 300, rotate: false, has_link: false,
+  description: 'Have you ever played first person tetris?',
+  description_img: 'media/tetris.img' }
 ];
 
 function createConstellationInfo(constellation) {
@@ -138,8 +151,8 @@ function createRandomStars(numStars) {
     const star = document.createElement('div');
     star.className = 'star';
     
-    const randomX = Math.random() * 250;  
-    const randomY = Math.random() * 250;  
+    const randomX = Math.random() * 300;  
+    const randomY = Math.random() * 300;  
     
     star.style.left = `${randomX}%`;
     star.style.top = `${randomY}%`;
