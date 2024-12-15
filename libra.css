@@ -1,0 +1,101 @@
+/* Libra */
+body {
+    background-color: black;
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .side-gifs {
+    width: 120px;
+    padding: 10px;
+  }
+  
+  .gif-container {
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    padding: 5px;
+  }
+  
+  .main-content {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .media-entry {
+    margin: 40px auto;
+    max-width: 600px;
+  }
+  
+  .media-title {
+    font-family: "Impact", fantasy;
+    color: red;
+    font-size: 24px;
+    text-shadow: 2px 2px #ff0000, -2px -2px #990000;
+    margin-bottom: 15px;
+  }
+  
+  .media-content {
+    background: white;
+    color: black;
+    padding: 15px;
+    margin: 10px auto;
+    border: 2px solid #888;
+    box-shadow: 3px 3px #444;
+  }
+  
+  .media-link {
+    color: red;
+    text-decoration: underline;
+    font-family: "Courier New", monospace;
+  }
+  
+  .stars-table {
+    margin: 40px auto;
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+  }
+  
+  .stars-table th, .stars-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .stars-table th {
+    background-color: #ddd;
+  }
+  
+  .return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #c0c0c0;
+    border: 3px outset #808080;
+    color: black;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  
+  .return-button:active {
+    border-style: inset;
+  }
+  
+  .copyright {
+    margin-top: 40px;
+    font-family: "Courier New", monospace;
+    color: white;
+    font-size: 12px;
+  }
+  

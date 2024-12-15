@@ -155,7 +155,7 @@ body {
 
 /* Background star twinkle animation */
 .background-star {
-    animation: twinkle 2s infinite alternate;
+    animation: twinkle 1s infinite alternate;
 }
 
 @keyframes twinkle {

@@ -7,6 +7,7 @@ const ursaY = 50;
 const scorX = 50;
 const scorY = 110;
 
+// constellation coords
 const constellations = [
     {
       name: 'Ursa Major',
@@ -68,27 +69,17 @@ const constellations = [
         { name: 'Ascella', x: 210, y: 110 }
       ],
       lines: [[0,1], [1,2], [0,3], [0,4]]
-    },
-    {
-      name: 'Leo',
-      story: "The Lion - Representing the Nemean Lion defeated by Hercules.",
-      stars: [
-        { name: 'Regulus', x: 100, y: 70 },
-        { name: 'Denebola', x: 105, y: 75 },
-        { name: 'Algieba', x: 110, y: 80 },
-        { name: 'Zosma', x: 95, y: 65 }
-      ],
-      lines: [[0,1], [1,2], [0,3]]
     }
 
     //Libra
     //Orion
+    //Canis minor
   ];
 
 const spaceObjects = [
   { name: 'Nyan Cat', image: 'media/nyan-cat.gif', x: 0, y: 25, link: 'nyan-cat', size: 300, rotate: false, has_link: true },
-  { name: 'Galaga', image: 'media/galaga.gif', x: 50, y: 75, link: 'media', size: 150, rotate: false, has_link: true },
-  { name: 'Book', image: 'media/book.gif', x: 15, y: 60, link: 'media', size: 120, rotate: false, has_link: true },
+  { name: 'Galaga', image: 'media/galaga.gif', x: 50, y: 75, link: 'orion', size: 150, rotate: false, has_link: true },
+  { name: 'Book', image: 'media/book.gif', x: 15, y: 60, link: 'orion', size: 120, rotate: false, has_link: true },
 
   { name: 'orca', image:'media/orca.gif', x: 75, y: 50, link: '', size: 300, rotate: false, has_link: false, 
   description: 'Did you know orcas have starting wearing salmon as hats again? How do they keep it balanced on their heads?', 
@@ -101,7 +92,7 @@ const spaceObjects = [
   { name: 'DVD', image: 'media/dvd.gif', x: 80, y: 120, link: '', size: 500, rotate: false , has_link: false,
   description: ' ',
   description_img: ' '},
-  
+
   { name: 'Asteroid', image: 'media/asteroid.gif', x: 5, y: 140, link: '', size: 300, rotate: false, has_link: false,
   description: ' ',
   description_img: ' '},
@@ -244,7 +235,6 @@ spaceObjects.forEach(object => {
   skyContainer.appendChild(element);
 });
 
-// Function to show popout
 function showPopout(object, element) {
   const popout = document.createElement('div');
   popout.className = 'space-object-popout';

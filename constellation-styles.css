@@ -1,22 +1,167 @@
 /* ursa major */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  th, td {
-    border: 1px solid #666;
-    padding: 10px;
-    text-align: left;
-  }
-  .terminal-style {
-    background-color: #000;
-    color: #0f0;
-    padding: 10px;
-    font-family: 'Courier New', monospace;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #666;
+  padding: 10px;
+  text-align: left;
+}
+.terminal-style {
+  background-color: #000;
+  color: #0f0;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+}
 
 /* scorpius */
+.scor-body {
+background-color: #000080;
+color: white;
+font-family: Arial, sans-serif;
+text-align: center;
+padding: 20px;
+}
+.constellation-frame {
+border: 10px solid white;
+max-width: 500px;
+margin: 20px auto;
+box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+.constellation-frame img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+.icon-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin: 30px 0;
+}
+.icon-box {
+border: 2px solid white;
+width: 100px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+.icon-box:hover {
+background-color: rgba(255,255,255,0.2);
+}
+.icon-box img {
+max-width: 80px;
+max-height: 80px;
+}
+.scor-table {
+width: 80%;
+margin: 30px auto;
+border-collapse: collapse;
+}
+.scor-th, .scor-td {
+border: 1px solid white;
+padding: 10px;
+text-align: left;
+}
+.copyright {
+margin-top: 50px;
+font-size: 12px;
+color: #cccccc;
+}
 
+/* sagittarius */
+.sagi-body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.story-box {
+  border: 2px solid white;
+  padding: 15px;
+  margin: 15px 0;
+  position: relative;
+}
+.sagi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.sagi-th, .sagi-td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: left;
+}
+.sagi-return-btn {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
 
-/* libra */
+/* orion */
+.orion-body {
+background-color: yellow;
+font-family: "Comic Sans MS", cursive;
+text-align: center;
+}
+
+.main-table {
+margin: 20px auto;
+border-collapse: collapse;
+width: 80%;
+}
+
+.main-table td {
+border: 5px outset #808080;
+padding: 20px;
+background: #c0c0c0;
+width: 200px;
+height: 200px;
+position: relative;
+cursor: pointer;
+}
+
+.main-table td:active {
+border-style: inset;
+}
+
+.title-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+text-shadow: 2px 2px #000000;
+font-size: 24px;
+font-weight: bold;
+z-index: 1;
+}
+
+.stars-table {
+margin: 40px auto;
+border: 2px solid black;
+width: 60%;
+}
+
+.stars-table th, .stars-table td {
+border: 1px solid black;
+padding: 10px;
+text-align: left;
+}
+
+.stars-table th {
+background-color: #c0c0c0;
+}
